@@ -1,38 +1,167 @@
-.App {
-  text-align: center;
+/* General */
+
+body{
+  font-family: karla ,Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1, h2, h3, h4, h5, h6{
+
+  font-family: 'Markazi Text', serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a{
+
+  color: black;
+  text-decoration: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+a:hover{
+
+  color: #495e57;
+}
+
+
+/* Header */
+
+#header{
+
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+ background: white;
+ 
+
 }
 
-.App-link {
-  color: #61dafb;
+#header img{
+
+  max-height: 40px;
+  margin: 12px 0;
+ 
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Nav */
+
+#nav ul{
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: stretch;
+  align-items: center;
+  
+
+}
+
+#nav li{
+
+  list-style-type: none;
+}
+
+#nav li a{
+
+  display: inline-block;
+  padding: 20px 10px;
+ 
+}
+
+#nav li a:hover{
+
+  color: #495e57;
+}
+
+@media (max-width: 768px) {
+  #nav ul a{
+
+      display: none;
+
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+
+
+
+/* Footer */
+
+#footer{
+
+  font-size: 14px;
+  background: #37517e;
+}
+
+#footer .footer-top {
+  padding: 60px 0 30px 0;
+  background: #fff;
+}
+
+#footer .footer-top h4 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #495E57;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+#footer .footer-top .footer-contact {
+  margin-bottom: 30px;
+ 
+}
+
+#footer .footer-top .footer-links {
+  margin-bottom: 30px;
+ 
+}
+
+#footer .footer-top .footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#footer .footer-top .footer-links ul i {
+  padding-right: 2px;
+  color: #EE9972;
+  font-size: 18px;
+  line-height: 1;
+}
+#footer .footer-top .footer-links ul li {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+}
+#footer .footer-top .footer-links ul li:first-child {
+  padding-top: 0;
+}
+#footer .footer-top .footer-links ul a {
+  text-decoration: none;
+  color: #777777;
+  transition: 0.3s;
+  display: inline-block;
+  line-height: 1;
+}
+#footer .footer-top .footer-links ul a:hover {
+  text-decoration: underline;
+  color: #EE9972;
+}
+
+#footer .footer-top .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: #495E57;
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+#footer .footer-top .social-links a:hover {
+  
+  color: #fff;
+  text-decoration: none;
+  font-size: 25px;
+  width: 46px;
+  height: 46px;
 }

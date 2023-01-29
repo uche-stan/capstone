@@ -7,20 +7,25 @@ export default function Hero() {
 
         <section id="hero">
 
-            <div>
-                <h1>Little Lemon</h1>
+            <div className='hero-box'>
 
-                <h2>Chicago</h2>
+                <div className='hero-description'>
+                    <h1>Little Lemon</h1>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing
-                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                    <h2>Chicago</h2>
 
-                <button>Reserve a table</button>
+                    <p>We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
+
+                    <button className='btn btn-warning mt-5'>Reserve a table</button>
+                </div>
+
+                <div>
+                    <img src={heroImage} alt="hero image" className='' />
+                </div>
+
             </div>
 
-            <div>
-                <img src={heroImage}  alt="hero image" height={500} />
-            </div>
+
         </section>
     )
 }

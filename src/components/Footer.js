@@ -16,6 +16,20 @@ export default function Footer() {
                 <div className='container '>
                     <div className='row'>
 
+                        <div className=' col-lg-4 col-md-4 text-center text-md-center mb-3'>
+                            <h4 >Contact Address</h4>
+                            <div className=' d-flex gap-3 justify-content-center justify-content-md-center align-items-center  '>
+                                <address>
+
+                                    123 Oak lane<br />
+                                    Chicago, 65674,<br />
+                                    Illinoir <br />
+                                    <strong>Phone:</strong> +123 456 6770<br />
+                                    <strong>Email:</strong> info@little-lemon.com
+
+                                </address>
+                            </div>
+                        </div>
 
 
                         <div className="col-lg-4 col-md-4 footer-links text-center text-md-center">
@@ -34,21 +48,6 @@ export default function Footer() {
 
                             </div>
 
-                        </div>
-
-                        <div className=' col-lg-4 col-md-4 text-center text-md-center mb-3'>
-                            <h4 >Contact Address</h4>
-                            <div className=' d-flex gap-3 justify-content-center justify-content-md-center align-items-center  '>
-                                <address>
-
-                                    123 Oak lane<br />
-                                    NY, 656774,<br />
-                                    New York <br />
-                                    <strong>Phone:</strong> +123 456 6770<br />
-                                    <strong>Email:</strong> info@little-lemon.com
-
-                                </address>
-                            </div>
                         </div>
 
 

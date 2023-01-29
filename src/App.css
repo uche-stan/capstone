@@ -71,6 +71,21 @@ a:hover{
   color: #495e57;
 }
 
+#nav .order-online-btn{
+
+  background: #495E57 ;
+  color: white;
+  border-radius: 12px;
+  padding: 5px 10px;
+}
+
+#nav .order-online-btn:hover{
+
+   
+  color: #F4CE14;
+  
+}
+
 @media (max-width: 768px) {
   #nav ul a{
 

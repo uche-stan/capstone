@@ -1,8 +1,6 @@
-import About from "./About"
-import Hero from "./Hero"
-import Specials from "./Specials"
-import Testimonies from "./Testimonies"
-import Card from "./Card"
+import HomePage from "./HomePage"
+import BookingPage from "./BookingPage"
+import { Routes, Route } from "react-router-dom"
 
 export default function Main() {
 
@@ -11,14 +9,22 @@ export default function Main() {
 
         <main id="main" >
 
-            <Hero />
-            <Specials />
 
-            {/* <Card /> */}
 
-            <Testimonies />
 
-            <About />
+           
+
+           
+
+            <Routes>
+
+                <Route path="/" element={<HomePage />}></Route>
+
+                <Route path="/booking" element={<BookingPage />}></Route>
+
+
+
+            </Routes>
 
 
 

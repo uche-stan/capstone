@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 
 export default function Nav() {
 
@@ -8,28 +10,31 @@ export default function Nav() {
 
             <ul>
                 <li>
-                    <a>Home</a>
+
+                    <Link to="/" className="nav-link">Home</Link>
                 </li>
 
                 <li>
-                    <a href="">About</a>
+
+                    <Link to="/" className="nav-link">About</Link>
                 </li>
 
                 <li>
-                    <a href="">Menu</a>
+
+                    <Link to="/" className="nav-link">Menu</Link>
                 </li>
 
                 <li>
-                    <a href="">Reservations</a>
+
+                    <Link to="/booking" className="nav-link">Reservations</Link>
                 </li>
 
                 <li>
-                    <a href="">Order Online</a>
+                    <a href=""></a>
+                    <Link to="/" className=""><button type="button" className="btn btn-success order-online-btn">Order Online</button></Link>
                 </li>
 
-                <li>
-                    <a href="">Login</a>
-                </li>
+
             </ul>
 
 

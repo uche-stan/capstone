@@ -1,4 +1,5 @@
 import heroImage from '../assets/icons_assets/restaurantfood.jpg'
+import { Link } from 'react-router-dom'
 
 
 export default function Hero() {
@@ -16,7 +17,7 @@ export default function Hero() {
 
                     <p>We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
 
-                    <button className='btn btn-warning mt-5'>Reserve a table</button>
+                    <Link to="/booking" ><button className='btn btn-warning mt-5'>Reserve a table</button></Link>
                 </div>
 
                 <div>

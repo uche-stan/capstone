@@ -270,6 +270,10 @@ a:hover{
 
 }
 
+#card .kard-body .delivery-button{
+  background: #F4CE14;
+}
+
 #card .kard-body .button-icon{
 
   width: 40px;
@@ -294,8 +298,8 @@ a:hover{
     justify-content: center;
     align-items: center;
     gap: 0;
-    
-    
+
+
   }
 
   #card .kard img{
@@ -340,6 +344,38 @@ a:hover{
   }
 }
 
+
+/* Booking Page */
+
+#booking-page .title-box{
+
+  background: #495E57;
+  color: #F4CE14;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+
+
+
+/* Booking Form */
+
+#booking-form{
+
+  display: grid;
+  place-items: center;
+}
+
+#booking-form #form{
+  display: grid;
+  max-width: 300px;
+  gap: 20px;
+
+}
+
+ .book-table-button{
+
+background-color: #F4CE14;
+}
 
 
 

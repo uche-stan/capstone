@@ -29,7 +29,7 @@ export default function Card() {
 
                         </div>
                         <div className='text-center my-3'>
-                            <a href="#" type='button' className="btn btn-warning" >Order a delivery <img src={deliveryIcon} className='button-icon' /></a>
+                            <button type='button' className="btn btn-warning delivery-button" >Order a delivery <img src={deliveryIcon} className='button-icon' /></button>
                         </div>
 
                     </div>
@@ -51,7 +51,7 @@ export default function Card() {
                             <p className="kard-text my-2 mx-2 ">Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil. </p>
                         </div>
                         <div className='text-center my-3'>
-                            <a href="#" type='button' className="btn btn-warning" >Order a delivery <img src={deliveryIcon} className='button-icon' /></a>
+                            <button type='button' className="btn btn-warning delivery-button" >Order a delivery <img src={deliveryIcon} className='button-icon' /></button>
                         </div>
 
                     </div>
@@ -74,7 +74,7 @@ export default function Card() {
 
                         </div>
                         <div className='text-center my-3'>
-                            <a href="#" className="btn btn-warning" >Order a delivery <img src={deliveryIcon} className='button-icon' /></a>
+                            <button  className="btn btn-warning delivery-button" >Order a delivery <img src={deliveryIcon} className='button-icon' /></button>
                         </div>
 
                     </div>

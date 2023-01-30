@@ -3,22 +3,22 @@ import Specials from "./Specials"
 import About from "./About"
 import Testimonies from "./Testimonies"
 
-export default function HomePage(){
+export default function HomePage() {
 
-    return(
+    return (
 
         <>
 
-        <Hero />
+            <Hero />
 
-        <Specials />
+            <Specials />
 
-         {/* <Testimonies />
+            {/* <Testimonies />
 
             <About /> */}
 
 
-        
+
         </>
     )
 }

@@ -2,9 +2,40 @@ import { useState } from "react"
 
 export default function BookingForm(props) {
 
+   
+
+    const options = props.availableTimes.map((availableTime, index) => <option key={index}>{availableTime.time}</option>)
+
+    const [form, setForm] = useState({
+
+        date: "",
+        time: "",
+        guests: "",
+        occasion: "",
+    })
+
+    const handleChange = e => {
+
+        setForm(prev => ({ ...prev, [e.target.name]: e.target.value }))
+
+        
+    }
+
+    const handleDate = e => {
+
+        setForm(prev => ({ ...prev, date: e.target.value }))
+
+        props.dispatch({type: "selected date"})
+    }
 
 
+const onSubmit =(e)=>{
 
+    e.preventDefault();
+
+    alert(`Date: ${form.date}, Time: ${form.time}, Guests: ${form.guests}, Occasion: ${form.occasion} `)
+
+}
 
 
     return (
@@ -12,7 +43,7 @@ export default function BookingForm(props) {
         <>
             <section id="booking-form" >
 
-                <form id="form" onSubmit={props.handleForm}>
+                <form id="form" onSubmit={onSubmit}>
 
 
                     <div className="mb-0">
@@ -23,8 +54,9 @@ export default function BookingForm(props) {
                             type="date"
                             id="res-date"
                             name="date"
-                            value={props.form.date}
-                            onChange={props.handleDate}
+                            value={form.date}
+                            onChange={handleDate}
+
                         />
 
                     </div>
@@ -35,12 +67,13 @@ export default function BookingForm(props) {
                             className="form-select"
                             id="res-time "
                             name="time"
-                            value={props.form.time}
-                            onChange={props.handleChange}
+                            value={form.time}
+                            onChange={handleChange}
+
+
                         >
 
-                            {props.availableTimes.map((availableTime, index) => <option key={index}>{availableTime}</option>)}
-
+                            {options}
 
                         </select>
 
@@ -56,8 +89,9 @@ export default function BookingForm(props) {
                             max="10"
                             id="guests"
                             name="guests"
-                            value={props.form.guests}
-                            onChange={props.handleChange}
+                            value={form.guests}
+                            onChange={handleChange}
+
 
                         />
                     </div>
@@ -69,8 +103,9 @@ export default function BookingForm(props) {
                             id="occasion"
                             className="form-select"
                             name="occasion"
-                            value={props.form.occasion}
-                            onChange={props.handleChange}
+                            value={form.occasion}
+                            onChange={handleChange}
+
                         >
 
                             <option>Birthday</option>

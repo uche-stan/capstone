@@ -378,6 +378,19 @@ background-color: #F4CE14;
 }
 
 
+/* Feedback form */
+
+.feedback-box{
+
+  padding: 25px;
+  border: 1px solid black;
+  width: 50%;
+  margin: 25px auto;
+}
+
+
+
+
 
 /* Footer */
 

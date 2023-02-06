@@ -3,6 +3,7 @@ import { BsTwitter } from 'react-icons/bs';
 import { BsFacebook } from 'react-icons/bs';
 import { BsInstagram } from 'react-icons/bs';
 import { BsLinkedin } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
 
 
 export default function Footer() {
@@ -38,12 +39,13 @@ export default function Footer() {
                             <div className='d-flex gap-3 justify-content-center  justify-content-md-center   align-items-center'>
 
                                 <ul>
-                                    <li><i><BiChevronRight /></i> <a href="#">Home</a></li>
-                                    <li><i><BiChevronRight /></i> <a href="#">About us</a></li>
-                                    <li><i><BiChevronRight /></i> <a href="#">Menu</a></li>
-                                    <li><i><BiChevronRight /></i> <a href="#">Reservations</a></li>
-                                    <li><i><BiChevronRight /></i> <a href="#">order Online</a></li>
-                                    <li><i><BiChevronRight /></i> <a href="#"> Login</a></li>
+                                    <li><i><BiChevronRight /></i> <Link to="/" className='nav-link'>Home</Link>  </li>
+                                    <li><i><BiChevronRight /></i> <Link to="/" className='nav-link'>About</Link>  </li>
+                                    <li><i><BiChevronRight /></i> <Link to="/" className='nav-link'>Menu</Link>  </li>
+                                    <li><i><BiChevronRight /></i> <Link to="/booking" className='nav-link'>Reservations</Link>  </li>
+                                    <li><i><BiChevronRight /></i> <Link to="/" className='nav-link'>Order Online</Link>  </li>
+                                    <li><i><BiChevronRight /></i> <Link to="/" className='nav-link'>Login</Link>  </li>
+                                    <li><i><BiChevronRight /></i> <Link to="/feedback" className='nav-link'>Feedback</Link>  </li>
                                 </ul>
 
                             </div>

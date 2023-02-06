@@ -1,31 +1,52 @@
 import HomePage from "./HomePage"
 import BookingPage from "./BookingPage"
 import { Routes, Route } from "react-router-dom"
-import {  useReducer } from "react"
+import { useReducer, useState } from "react"
 
-const updateTimes = (availableTimes, action) => {
 
-    
 
-    if (action.type === "01/31/2023") return  ["17:00", "18:00","19:00", "20:00"  ] 
 
-    return availableTimes;
+
+
+const initializeTimes =()=>{
+
+    return [  { time: "17:00" }, { time: "18:00" }, { time: "19:00" },
+       { time: "20:00" }, { time: "21:00" }, { time: "22:00" },
+    ]
 }
 
-export default function Main() {
+const updateTimes =(state, action) =>{
+
+    switch(action.type){
+
+        case "selected date":
+
+         {
+            return [  { time: "17:00" }, { time: "18:00" }, { time: "19:00" },
+            { time: "20:00" }, { time: "21:00" }, { time: "22:00" }, { time: "30:00" }
+         ]
+        }
+
+        default:
+
+        return state;
 
 
-    const initializeTimes = ()=>{
 
-        return ["17:00", "18:00","19:00", "20:00","21:00", "22:00", ]
+
     }
 
+}
+export default function Main() {
+
+    // const [availableTimes, setAvailableTimes] = useState([
+
+    //     { time: "17:00" }, { time: "18:00" }, { time: "19:00" },
+    //     { time: "20:00" }, { time: "21:00" }, { time: "22:00" },
+
+    // ])
 
     const [availableTimes, dispatch] = useReducer(updateTimes, initializeTimes())
-
-
-
-  
 
     return (
 
@@ -37,15 +58,12 @@ export default function Main() {
 
                 <Route path="/" element={<HomePage />}></Route>
 
-                <Route
-                    path="/booking"
-                    element={<BookingPage
-                        availableTimes={availableTimes}
-                        updateTimes={updateTimes}
-                        dispatch = {dispatch}
-                    />}>
+                <Route path="/booking" element={<BookingPage 
+                availableTimes={availableTimes} dispatch={dispatch} />}>
 
                 </Route>
+
+               
 
 
 
@@ -58,3 +76,4 @@ export default function Main() {
         </main>
     )
 }
+

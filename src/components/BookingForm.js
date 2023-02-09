@@ -2,40 +2,7 @@ import { useState } from "react"
 
 export default function BookingForm(props) {
 
-   
-
-    const options = props.availableTimes.map((availableTime, index) => <option key={index}>{availableTime.time}</option>)
-
-    const [form, setForm] = useState({
-
-        date: "",
-        time: "",
-        guests: "",
-        occasion: "",
-    })
-
-    const handleChange = e => {
-
-        setForm(prev => ({ ...prev, [e.target.name]: e.target.value }))
-
-        
-    }
-
-    const handleDate = e => {
-
-        setForm(prev => ({ ...prev, date: e.target.value }))
-
-        props.dispatch({type: "selected date"})
-    }
-
-
-const onSubmit =(e)=>{
-
-    e.preventDefault();
-
-    alert(`Date: ${form.date}, Time: ${form.time}, Guests: ${form.guests}, Occasion: ${form.occasion} `)
-
-}
+  
 
 
     return (
@@ -43,7 +10,7 @@ const onSubmit =(e)=>{
         <>
             <section id="booking-form" >
 
-                <form id="form" onSubmit={onSubmit}>
+                <form id="form" onSubmit={props.submitForm}>
 
 
                     <div className="mb-0">
@@ -54,8 +21,11 @@ const onSubmit =(e)=>{
                             type="date"
                             id="res-date"
                             name="date"
-                            value={form.date}
-                            onChange={handleDate}
+                            value={props.form.date}
+                            onChange={e => props.setForm(prev => ({
+                                ...prev,
+                                date: e.target.value
+                            }))}
 
                         />
 
@@ -67,13 +37,14 @@ const onSubmit =(e)=>{
                             className="form-select"
                             id="res-time "
                             name="time"
-                            value={form.time}
-                            onChange={handleChange}
+                            value={props.form.time}
+                            onChange={(e) => props.setForm(prev => ({ ...prev, time: e.target.value }))}
+
 
 
                         >
 
-                            {options}
+                            {props.availableTimes.map((availableTime, index) => <option key={index}>{availableTime}</option>)}
 
                         </select>
 
@@ -89,8 +60,10 @@ const onSubmit =(e)=>{
                             max="10"
                             id="guests"
                             name="guests"
-                            value={form.guests}
-                            onChange={handleChange}
+                            onChange={e => props.setForm(prev => ({
+                                ...prev,
+                                guests: e.target.value
+                            }))}
 
 
                         />
@@ -103,8 +76,11 @@ const onSubmit =(e)=>{
                             id="occasion"
                             className="form-select"
                             name="occasion"
-                            value={form.occasion}
-                            onChange={handleChange}
+                            value={props.form.occasion}
+                            onChange={e => props.setForm(prev => ({
+                                ...prev,
+                                occasion: e.target.value
+                            }))}
 
                         >
 

@@ -13,7 +13,14 @@ export default function BookingPage(props) {
                     <h2 className="text-center">Reserve A Table </h2>
                 </div>
 
-                <BookingForm availableTimes={props.availableTimes} dispatch={props.dispatch} />
+                <BookingForm 
+                availableTimes={props.availableTimes} 
+                dispatch={props.dispatch} 
+                form={props.form} 
+                setForm={props.setForm} 
+                submitForm={props.submitForm}
+
+                />
 
             </section>
 

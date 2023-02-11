@@ -15,20 +15,14 @@ const initializeTimes = () => {
 
 const updateTimes = (state, action) => {
 
+    const date = new Date(Date.parse(action.payload))
+
     switch (action.type) {
 
-        case "02/14/2023":
+        case "date":
 
             {
-                return [
-                    {
-                        time: "18.00"
-                    },
-
-                    {
-                        time: "20.00"
-                    }
-                ]
+                return  fetchAPI(date)
             }
 
         default:
@@ -53,7 +47,7 @@ export default function Main() {
 
     const formattedToday = yyyy + '-' + mm + '-' + dd;
 
-  
+
 
     const [form, setForm] = useState({
 
@@ -63,7 +57,7 @@ export default function Main() {
         occasion: "",
     })
 
-  
+
     const [availableTimes, dispatch] = useReducer(updateTimes, initializeTimes())
 
 
@@ -76,8 +70,8 @@ export default function Main() {
     }
 
 
-  
-  
+
+
     return (
 
         <main id="main" >

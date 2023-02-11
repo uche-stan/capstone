@@ -2,7 +2,7 @@ import { useState } from "react"
 
 export default function BookingForm(props) {
 
-  
+
 
 
     return (
@@ -22,10 +22,16 @@ export default function BookingForm(props) {
                             id="res-date"
                             name="date"
                             value={props.form.date}
-                            onChange={e => props.setForm(prev => ({
-                                ...prev,
-                                date: e.target.value
-                            }))}
+                            onChange={e => {
+                                props.setForm(prev =>{
+                                    return{
+                                        ...prev,
+                                        date: e.target.value
+                                    }
+                                })
+
+                                props.dispatch({type: "date", payload: e.target.value})
+                            }}
 
                         />
 

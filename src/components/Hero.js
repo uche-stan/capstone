@@ -1,6 +1,6 @@
 import heroImage from '../assets/icons_assets/restaurantfood.jpg'
 import { Link } from 'react-router-dom'
-import { BrowserRouter as Router } from 'react-router-dom';
+
 
 
 export default function Hero() {

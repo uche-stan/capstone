@@ -1,5 +1,5 @@
 
-const seededRandom = function (seed) {
+export const seededRandom = function (seed) {
     var m = 2**35 - 31;
     var a = 185852;
     var s = seed % m;

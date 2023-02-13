@@ -27,12 +27,14 @@ a:hover{
 
 #header{
 
-  display: flex;
+  display:flex;
   justify-content: center;
- background: white;
- 
+  background: white;
+
 
 }
+
+
 
 #header img{
 
@@ -69,6 +71,7 @@ a:hover{
 #nav li a:hover{
 
   color: #495e57;
+  
 }
 
 #nav .order-online-btn{
@@ -92,6 +95,9 @@ a:hover{
       display: none;
 
   }
+
+
+
 }
 
 

@@ -1,0 +1,156 @@
+#navbar {
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 0;
+   
+ }
+
+ #navbar .wrapper {
+   /* Controls the nav-header and the links-container in both mobile and desktop mode   */
+       width: 100%;
+       padding: 0 8px;
+       margin: 0 auto;
+     
+
+    }
+
+    #navbar .nav-header {
+    /* controls the position of the logo and hamburger in Mobile mode */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0 1rem;
+
+ }
+
+ #navbar .logo{
+    /* controls the logo position in Mobile mode */
+    margin: 0 auto;
+}
+
+ .hamburger-btn{
+    /* customize the hamburger button in Mobile mode */
+    font-size: 1.5rem;
+    background: transparent;
+    border-color: transparent;
+    transition: var(--transition);
+    cursor: pointer;
+    color: #000;
+ }
+
+
+
+
+ .links-container {
+    /* toggle the hamburger on and off
+    controls the positions of the anchor links
+     */
+    height: 0;
+    overflow: hidden;
+    transition: var(--transition);
+    position: absolute;
+    top: 56px;
+    right: 100px;
+    left: 0px;
+    z-index: 3;
+    min-width: 800px;
+    background: transparent;
+
+ }
+
+ .links{
+   padding: 0;
+ }
+
+
+ .links li{
+
+    list-style-type: none;
+ }
+
+ .links a {
+   font-family: karla ,Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    color: #000;
+    
+   
+    letter-spacing: var(--spacing);
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: var(--transition);
+    text-decoration: none;
+ }
+
+ .links a:hover {
+   
+    color: #495e57;
+    background: rgb(236, 249, 225, 0.8);
+ }
+
+ 
+
+ /* Desktop Mode */
+
+ /*
+=============== 
+MEDIA QUERIES //  Desktop Mode 
+===============
+*/
+
+@media(min-width: 800px) {
+   
+    .wrapper{
+      
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+      
+     }
+
+     .nav-header {
+        padding: 0 13px;
+        display: flex;
+        justify-content: center;
+     }
+     .hamburger-btn {
+        display: none;
+     }
+
+     .hamburger-btn:hover {
+      color: var(--clr-primary-1);
+      transform: rotate(90deg);
+   }
+
+     .links-container {
+        /* controls the wrapper in desktop mode */
+        height: auto !important;
+        position: static;
+     }
+
+     .links {
+         /* controls the positions of the anchor links in desktop mode */
+        display: flex;
+        justify-content: flex-end;
+        padding-top: 20px;
+
+       
+     }
+
+     .links a:hover {
+      background: none;
+      color: #495e57;
+      
+   }
+
+   .links a {
+      padding: 0;
+      margin: 0 0.5rem;
+   }
+  
+
+    
+ }
+ 
